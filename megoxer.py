@@ -7,7 +7,7 @@ import threading
 from telebot import types
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('6855294912:AAGIvK4Y1_Txi5h0xvOWOQXzg-tqLQEUGRg')
+bot = telebot.TeleBot('7792426525:AAH3VXch2GMp1y_EfsA2tTY-4lgzKGceIWg')
 
 # Admin user IDs
 admin_id = {"7469108296"}
